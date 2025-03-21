@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd2t2og64wra3"]
+[gd_scene load_steps=9 format=3 uid="uid://bd2t2og64wra3"]
 
-[ext_resource type="Texture2D" uid="uid://c8sn1tbiegbae" path="res://sprites/001.png" id="1_6px6i"]
-[ext_resource type="PackedScene" uid="uid://cka5x7ddep4fg" path="res://player/player.tscn" id="2_p0nqh"]
-[ext_resource type="Script" uid="uid://df4iio61fw4si" path="res://player/player.gd" id="3_xdean"]
-[ext_resource type="Texture2D" uid="uid://x3qx805k0rds" path="res://sprites/decoration/Fences.png" id="4_vkx8c"]
+[ext_resource type="Texture2D" uid="uid://c8sn1tbiegbae" path="res://sprites/001.png" id="1_4f38u"]
+[ext_resource type="Texture2D" uid="uid://x3qx805k0rds" path="res://sprites/decoration/Fences.png" id="2_irq3h"]
+[ext_resource type="PackedScene" uid="uid://bmu0q4nst2qr7" path="res://slime/slime.tscn" id="3_irq3h"]
+[ext_resource type="PackedScene" uid="uid://cka5x7ddep4fg" path="res://player/player.tscn" id="3_w8k62"]
+[ext_resource type="Script" uid="uid://df4iio61fw4si" path="res://player/player.gd" id="4_bini3"]
+[ext_resource type="Script" uid="uid://c2732ddvifyye" path="res://slime/slime.gd" id="4_w8k62"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkx8c"]
-texture = ExtResource("4_vkx8c")
+texture = ExtResource("2_irq3h")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -48,9 +50,11 @@ sources/0 = SubResource("TileSetAtlasSource_vkx8c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_right = 1150.0
-offset_bottom = 654.0
-texture = ExtResource("1_6px6i")
+offset_left = -1591.0
+offset_top = -1227.0
+offset_right = 3307.0
+offset_bottom = 2374.0
+texture = ExtResource("1_4f38u")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -60,5 +64,12 @@ tile_set = SubResource("TileSet_6eilq")
 format = 2
 layer_0/tile_data = PackedInt32Array(327698, 65536, 0, 327699, 131072, 0, 327700, 196608, 0, 393234, 0, 0, 458770, 0, 1, 327706, 196608, 0, 327701, 65536, 0, 327702, 131072, 0, 327703, 196608, 0, 327704, 65536, 0, 327705, 131072, 0, 524306, 0, 2, 393242, 0, 0, 458778, 0, 1, 524314, 0, 2, 589848, 65536, 0, 589849, 131072, 0, 589850, 196608, 0, 589842, 65536, 0, 589843, 131072, 0, 589844, 196608, 0)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_p0nqh")]
-script = ExtResource("3_xdean")
+[node name="Slime" parent="." instance=ExtResource("3_irq3h")]
+script = ExtResource("4_w8k62")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_w8k62")]
+script = ExtResource("4_bini3")
+
+[node name="Slime2" parent="." instance=ExtResource("3_irq3h")]
+position = Vector2(391, -68)
+script = ExtResource("4_w8k62")

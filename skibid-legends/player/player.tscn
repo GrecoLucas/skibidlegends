@@ -450,3 +450,6 @@ autoplay = "stand_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(405, 179)
 shape = SubResource("CapsuleShape2D_oul6g")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(402, 182)
