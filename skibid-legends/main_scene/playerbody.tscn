@@ -50,10 +50,10 @@ sources/0 = SubResource("TileSetAtlasSource_vkx8c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -1591.0
-offset_top = -1227.0
-offset_right = 3307.0
-offset_bottom = 2374.0
+offset_left = -1472.0
+offset_top = -1321.0
+offset_right = 3426.0
+offset_bottom = 2280.0
 texture = ExtResource("1_4f38u")
 stretch_mode = 1
 
@@ -65,11 +65,13 @@ format = 2
 layer_0/tile_data = PackedInt32Array(327698, 65536, 0, 327699, 131072, 0, 327700, 196608, 0, 393234, 0, 0, 458770, 0, 1, 327706, 196608, 0, 327701, 65536, 0, 327702, 131072, 0, 327703, 196608, 0, 327704, 65536, 0, 327705, 131072, 0, 524306, 0, 2, 393242, 0, 0, 458778, 0, 1, 524314, 0, 2, 589848, 65536, 0, 589849, 131072, 0, 589850, 196608, 0, 589842, 65536, 0, 589843, 131072, 0, 589844, 196608, 0)
 
 [node name="Slime" parent="." instance=ExtResource("3_irq3h")]
+position = Vector2(33, -7)
 script = ExtResource("4_w8k62")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_w8k62")]
+position = Vector2(-2, 1)
 script = ExtResource("4_bini3")
 
 [node name="Slime2" parent="." instance=ExtResource("3_irq3h")]
-position = Vector2(391, -68)
+position = Vector2(-7, 91)
 script = ExtResource("4_w8k62")

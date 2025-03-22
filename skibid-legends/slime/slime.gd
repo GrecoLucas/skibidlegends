@@ -19,6 +19,8 @@ func set_random_direction():
 
 # Função de atualização contínua
 func _physics_process(delta: float) -> void:
+	if !alive:
+		return
 	# Muda a direção aleatória periodicamente (uma vez a cada 60 quadros, por exemplo)
 	if randf() < 0.01:  # Há uma chance pequena de mudar a direção em cada quadro
 		set_random_direction()
@@ -32,3 +34,10 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("slime_walk")
 	else:
 		animated_sprite_2d.play("slime_idle")
+
+func die():
+	print("Slime está morrendo...")
+	alive = false
+	animated_sprite_2d.play("slime_death")  
+	await get_tree().create_timer(1.0).timeout  # Espera 1 segundo antes de remover
+	queue_free()

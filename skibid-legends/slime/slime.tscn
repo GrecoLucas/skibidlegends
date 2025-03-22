@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bmu0q4nst2qr7"]
+[gd_scene load_steps=22 format=3 uid="uid://bmu0q4nst2qr7"]
 
 [ext_resource type="Texture2D" uid="uid://ducyd1sh4jfon" path="res://sprites/slime/Slime.png" id="1_bpl37"]
 [ext_resource type="PackedScene" uid="uid://ddvwso2jjsewn" path="res://killzone.tscn" id="2_ms0tw"]
@@ -127,11 +127,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpl37"]
-size = Vector2(97.5359, 48.1803)
+size = Vector2(75.5904, 44.954)
+
+[sub_resource type="GDScript" id="GDScript_ms0tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms0tw"]
+size = Vector2(75.7136, 45.0678)
 
 [node name="Slime" type="CharacterBody2D"]
 scale = Vector2(0.410105, 0.511633)
-collision_mask = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -143,7 +147,16 @@ autoplay = "slime_stand"
 frame_progress = 0.622055
 
 [node name="killzone" parent="." instance=ExtResource("2_ms0tw")]
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
-position = Vector2(543.763, 222.18)
+position = Vector2(535.229, 223.793)
 shape = SubResource("RectangleShape2D_bpl37")
+
+[node name="slimearea" type="Area2D" parent="."]
+script = SubResource("GDScript_ms0tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimearea"]
+position = Vector2(535.167, 223.736)
+shape = SubResource("RectangleShape2D_ms0tw")
