@@ -145,9 +145,8 @@ texture_filter = 1
 position = Vector2(543.579, 213.59)
 scale = Vector2(4.125, 4.15625)
 sprite_frames = SubResource("SpriteFrames_p81hp")
-animation = &"slime_walk"
+animation = &"slime_stand"
 autoplay = "slime_stand"
-frame_progress = 0.622055
 
 [node name="killzone" parent="." instance=ExtResource("2_ms0tw")]
 monitorable = false
