@@ -142,13 +142,13 @@ scale = Vector2(0.410105, 0.511633)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(543.579, 213.59)
-scale = Vector2(4.125, 4.15625)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_p81hp")
 animation = &"slime_stand"
 autoplay = "slime_stand"
 
 [node name="killzone" parent="." instance=ExtResource("2_ms0tw")]
+position = Vector2(-536.448, -220.861)
 monitorable = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
@@ -156,6 +156,7 @@ position = Vector2(535.229, 223.793)
 shape = SubResource("RectangleShape2D_bpl37")
 
 [node name="slimearea" type="Area2D" parent="."]
+position = Vector2(-536.448, -220.861)
 collision_layer = 3
 collision_mask = 3
 script = SubResource("GDScript_ms0tw")
@@ -165,5 +166,5 @@ position = Vector2(535.167, 223.736)
 shape = SubResource("RectangleShape2D_ms0tw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(536.448, 222.816)
+position = Vector2(1.54972e-05, 1.95454)
 shape = SubResource("RectangleShape2D_feswj")
