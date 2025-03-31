@@ -141,11 +141,12 @@ size = Vector2(69.6176, 38.227)
 scale = Vector2(0.410105, 0.511633)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
 texture_filter = 1
+position = Vector2(4.8768, -3.90905)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_p81hp")
-animation = &"slime_stand"
-autoplay = "slime_stand"
+animation = &"slime_walk"
 
 [node name="killzone" parent="." instance=ExtResource("2_ms0tw")]
 position = Vector2(-536.448, -220.861)
@@ -166,5 +167,5 @@ position = Vector2(535.167, 223.736)
 shape = SubResource("RectangleShape2D_ms0tw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.54972e-05, 1.95454)
+position = Vector2(0, 1.95453)
 shape = SubResource("RectangleShape2D_feswj")
